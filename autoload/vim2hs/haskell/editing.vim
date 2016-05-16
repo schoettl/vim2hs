@@ -108,7 +108,7 @@ endfunction " }}}
 
 function! vim2hs#haskell#editing#formatting() " {{{
   if executable('pointfree')
-    setlocal formatprg=xargs\ pointfree
+    setlocal formatprg=pointfree\ --stdin
   endif
   setlocal comments=s1:{-,mb:-,ex:-},:--
   setlocal commentstring=--%s
